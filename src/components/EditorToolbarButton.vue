@@ -1,8 +1,9 @@
 <template>
   <v-btn
-    :icon="props.icon"
+    rounded="pill"
     @mouseover="isHovering = true"
     @mouseleave="isHovering = false"
+    class="mx-1"
     :class="
       isHovering
         ? ['bg-vcpl-white', 'color-vcpl-secondary']
