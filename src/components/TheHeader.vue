@@ -1,12 +1,13 @@
 <template>
   <header>
     <HeaderLogo />
-
+    <HeaderEditorToggle />
   </header>
 </template>
 
 <script setup>
 import HeaderLogo from "@/components/HeaderLogo.vue";
+import HeaderEditorToggle from "@/components/HeaderEditorToggle.vue";
 
 </script>
 
@@ -18,5 +19,4 @@ header {
   height: 4rem;
   justify-content: space-between;
 }
-
 </style>

@@ -1,5 +1,47 @@
 :root {
     --vcpl-primary: #003057;
     --vcpl-secondary: #E1523D;
-    --vcpl-tertiary: #64CCC9;
+    --vcpl-accent: #64CCC9;
 }
+
+.bg-vcpl-primary {
+    background-color: var(--vcpl-primary) !important;
+}
+
+.bg-vcpl-secondary {
+    background-color: var(--vcpl-secondary) !important;
+}
+
+.bg-vcpl-accent {
+    background-color: var(--vcpl-accent) !important;
+}
+
+.bg-vcpl-white {
+    background-color: white !important;
+}
+
+.bg-vcpl-black {
+    background-color: black !important;
+}
+
+.color-vcpl-primary {
+    color: var(--vcpl-primary) !important;
+}
+
+.color-vcpl-secondary {
+    color: var(--vcpl-secondary) !important;
+}
+
+.color-vcpl-accent {
+    color: var(--vcpl-accent) !important;
+}
+
+.color-vcpl-white {
+    color: white !important;
+}
+
+.color-vcpl-black {
+    color: black !important;
+}
+
+
