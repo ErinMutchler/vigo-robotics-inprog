@@ -9,11 +9,17 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "webfontloader": "^1.0.0",
+    "@mdi/font": "7.0.96",
+    "roboto-fontface": "*",
+    "firebase": "^9.15.0",
+    "vuetify": "^3.0.6",
     "pinia": "^2.0.26",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
+    "vite-plugin-vuetify": "^1.0.0-alpha.12",
     "@rushstack/eslint-patch": "^1.1.4",
     "@vitejs/plugin-vue": "^3.2.0",
     "@vitejs/plugin-vue-jsx": "^2.1.1",
