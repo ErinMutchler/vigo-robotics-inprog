@@ -1,26 +1,14 @@
 <template>
-  <v-btn
-    rounded="pill"
-    @mouseover="isHovering = true"
-    @mouseleave="isHovering = false"
-    class="mx-1"
-    :class="
-      isHovering
-        ? ['bg-vcpl-white', 'color-vcpl-secondary']
-        : ['bg-vcpl-secondary', 'color-vcpl-white']
-    "
-  >
-    <slot></slot>
-    <v-tooltip activator="parent" location="top" :contained="true">{{
-      props.tooltip
-    }}</v-tooltip>
-  </v-btn>
+  <v-hover v-slot="{ isHovering, props }">
+    <v-btn v-bind="props" icon :class="isHovering ? ['bg-vcpl-white', 'color-vcpl-secondary'] : ['bg-vcpl-secondary', 'color-vcpl-white'] " style="border-radius: 0; margin: 0;">
+      <v-tooltip activator="parent" >{{buttonProps.tooltip}}</v-tooltip>
+      <v-icon :icon="buttonProps.icon" />
+    </v-btn>
+  </v-hover>
 </template>
 
 <script setup>
-import { ref } from "vue";
-
-const props = defineProps({
+const buttonProps = defineProps({
   tooltip: {
     type: String,
     required: true,
@@ -30,8 +18,9 @@ const props = defineProps({
     required: true,
   },
 });
-
-const isHovering = ref(false);
 </script>
 
 <style scoped></style>
+
+
+
