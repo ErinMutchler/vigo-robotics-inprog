@@ -1,5 +1,5 @@
 <template>
-  <v-btn-toggle rounded="xl">
+  <v-btn-toggle rounded="xl" style="position: absolute; top: 2rem; left: 50%; transform: translate(-50%, -50%)">
     <v-btn
       @click="router.push('/blockly')"
       :class="[

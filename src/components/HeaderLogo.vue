@@ -14,5 +14,6 @@ img {
   user-select: none;
   height: 3rem;
   margin: 0 2rem;
+  position: relative;
 }
 </style>
