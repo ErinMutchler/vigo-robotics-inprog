@@ -11,7 +11,6 @@ import EditorToolbar from "@/components/EditorToolbar.vue";
 <style scoped>
 footer {
   align-items: center;
-  background: var(--vcpl-primary);
   display: flex;
   height: 4rem;
   justify-content: center;

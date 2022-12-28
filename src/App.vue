@@ -1,6 +1,7 @@
 <template>
   <TheHeader />
   <RouterView />
+  <div style="height: calc(100vh - 8rem)"></div>
   <TheFooter />
 </template>
 
