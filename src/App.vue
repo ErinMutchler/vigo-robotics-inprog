@@ -1,7 +1,6 @@
 <template>
   <TheHeader />
   <RouterView />
-  <div style="height: calc(100vh - 8rem)"></div>
   <TheFooter />
 </template>
 
@@ -17,4 +16,5 @@ onMounted(() => {
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>
