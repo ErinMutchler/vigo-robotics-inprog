@@ -1,11 +1,11 @@
 <template>
-  <img src="@/assets/icons/vcpl.svg" alt="logo" v-if="mdAndUp" />
+  <img src="@/assets/icons/vcpl.svg" alt="logo" v-if="lgAndUp" />
   <img src="@/assets/icons/vcpl-min.svg" alt="logo" v-else />
 </template>
 
 <script setup>
 import { useDisplay } from "vuetify";
-const { mdAndUp } = useDisplay();
+const { lgAndUp } = useDisplay();
 </script>
 
 <style scoped>

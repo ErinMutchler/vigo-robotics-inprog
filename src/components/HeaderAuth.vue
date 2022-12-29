@@ -7,7 +7,7 @@
     @click="logout"
   >
     <v-icon icon="mdi-logout" class="mr-2" />
-    <span v-if="mdAndUp">Logout</span>
+    <span v-if="lgAndUp">Logout</span>
   </v-btn>
 
   <v-btn
@@ -18,7 +18,7 @@
     @click="loginDialog = true"
   >
     <v-icon icon="mdi-login" class="mr-2" />
-    <span v-if="mdAndUp">Login</span>
+    <span v-if="lgAndUp">Login</span>
   </v-btn>
 
   <v-dialog v-model="loginDialog" width="400">
@@ -80,7 +80,7 @@ import { useDisplay } from "vuetify";
 import { useAuthStore } from "@/stores/AuthStore";
 import {authService} from "@/services/FirebaseConfig";
 
-const { mdAndUp } = useDisplay();
+const { lgAndUp } = useDisplay();
 const authStore = useAuthStore();
 const loginDialog = ref(false);
 const errorOccurred = ref(false);

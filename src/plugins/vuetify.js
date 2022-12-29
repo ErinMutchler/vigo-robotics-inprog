@@ -33,7 +33,7 @@ export default createVuetify({
       xs: 0,
       sm: 340,
       md: 540,
-      lg: 800,
+      lg: 768,
       xl: 1280,
     },
   },
