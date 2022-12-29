@@ -7,7 +7,6 @@
     <v-text-field
       v-if="authStore.uid"
       placeholder="Project name"
-      v-model="projectName"
       variant="solo"
       single-line
       hide-details
@@ -24,6 +23,7 @@
       v-if="authStore.uid"
       icon="mdi-plus-circle"
       tooltip="Create Project"
+      :on-click="createProject"
     />
     <EditorToolbarButton
       v-if="authStore.uid"
@@ -42,8 +42,23 @@
 <script setup>
 import EditorToolbarButton from "@/components/EditorToolbarButton.vue";
 import { useAuthStore } from "@/stores/AuthStore";
+import {useProjectStore} from "@/stores/ProjectStore";
+import {onMounted} from "vue";
 
 const authStore = useAuthStore();
+const projectStore = useProjectStore();
+
+onMounted(() => {
+  projectStore.reset();
+});
+
+const createProject = () => {
+  if (projectStore.unsavedChangesExist && !confirm("Unsaved Changes Exist. Are you sure you want to start a new project?")) {
+    return;
+  }
+
+  projectStore.reset();
+};
 </script>
 
 <style scoped></style>
